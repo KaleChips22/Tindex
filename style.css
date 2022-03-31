@@ -1,0 +1,185 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    /* transition: 500ms; */
+}
+/* 
+.page *:hover:not(.section),
+.top-bar *:hover {
+    transform: scale(105%);
+} */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    background-color: #ff7070;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.top-bar {
+    width: 98%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.description {
+    font-size: 25px;
+}
+
+button,
+a {
+    width: auto;
+    height: auto;
+    padding: 3px;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    transition: 300ms;
+    background: transparent;
+    margin: 3px 0;
+}
+
+button:hover,
+a:hover {
+    border-color: #ff7070;
+    background: #ff7070;
+    color: white;
+    transform: scale(115%);
+    margin: 6px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #ddd;
+    transform: translateY(55px);
+}
+
+.page {
+    width: 90%;
+    min-height: calc(100vh * 0.9);
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 5px;
+    padding-top: 17px;
+    position: relative;
+}
+
+.page .top-section {
+    width: 100%;
+    max-height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page .name {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0 0 0;
+}
+
+.page .desc {
+    color: #444;
+    text-align: center;
+}
+
+.page .image {
+    width: 130px;
+    height: 130px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    border: 4px solid #ff7070;
+    overflow: hidden;
+    transition: 500ms;
+}
+
+.page .image:hover {
+    transform: scale(110%);
+    border-width: 5px;
+}
+
+.page .image img {
+    height: 100%;
+    transform: translateX(-22%);
+}
+
+.section-divider {
+    height: 1px;
+    width: 90%;
+    background: #ddd;
+    transform: translate(5.5%, 14px);
+}
+
+.page .mid-section {
+    width: 100%;
+    max-height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.page .mid-section .identifier {
+    font-weight: bold;
+    color: #ff7070;
+}
+
+.page .bottom-section {
+    width: 100%;
+    max-height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 45px / 100%;
+    position: absolute;
+    top: calc(5px + ((var(--i) * 45px)));
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.message.sent {
+    width: auto;
+    background: #ff7070;
+    color: white;
+    right: 10px;
+}
+
+.message.recieved {
+    width: auto;
+    background: #ddd;
+    color: #444;
+    left: 10px;
+}
