@@ -1,3 +1,9 @@
+console.log(`
+#########################
+#  Made by KaleChips22  #
+#########################
+`)
+
 let local = {
     liked: JSON.parse(window.localStorage.getItem('liked')) || null,
     blocked: JSON.parse(window.localStorage.getItem('blocked')) || null
